@@ -1,0 +1,104 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ─────────────────────────────────────────────
+   Añadir estas reglas AL FINAL de tu globals.css
+   (después de las directivas @tailwind existentes)
+   ───────────────────────────────────────────── */
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Animación flotante muy sutil para los chips decorativos del Hero */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Pulso lento para los degradados de fondo del Hero */
+@keyframes pulse-slow {
+  0%,
+  100% {
+    opacity: 0.35;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+.animate-pulse-slow {
+  animation: pulse-slow 5s ease-in-out infinite;
+}
+
+/* Respeta la preferencia del usuario por menos movimiento:
+   desactiva scroll suave y todas las animaciones ambientales. */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto !important;
+  }
+  .animate-float,
+  .animate-pulse-slow,
+  .animate-pulse {
+    animation: none !important;
+  }
+}
+
+/* ─────────────────────────────────────────────
+   Añadir ESTO al bloque que ya agregaste antes en
+   globals.css (junto a los @keyframes float / pulse-slow)
+   ───────────────────────────────────────────── */
+
+/* Entrada suave y moderada para las tarjetas de categoría en Skills */
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-fade-in-up {
+  animation: fade-in-up 0.6s ease-out both;
+}
+
+/* Extiende el bloque de prefers-reduced-motion que ya tienes
+   para incluir también esta animación: */
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-in-up {
+    animation: none !important;
+  }
+}
