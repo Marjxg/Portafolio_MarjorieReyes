@@ -34,3 +34,13 @@ export type SocialLink = {
   iconSrc?: string;
   external?: boolean;
 };
+
+export interface ExperienceEntry {
+  role: string;
+  organization: string;
+  period?: string;
+  summary: string;
+  responsibilities: string[];
+  relatedProjects?: string[];
+  technologies: string[];
+}
