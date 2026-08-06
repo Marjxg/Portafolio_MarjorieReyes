@@ -16,7 +16,7 @@ export default function SkillCategory({
   skills,
 }: SkillCategoryProps) {
   return (
-    <div className="h-full rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm transition-colors duration-300 hover:border-white/20 hover:bg-white/5">
+    <div className="h-full rounded-2xl border border-white/10 bg-white/4 p-6 backdrop-blur-sm transition-colors duration-300 hover:border-white/20 hover:bg-white/5">
       <div className="flex items-center gap-3">
         <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-white/10">
           <Icon className="h-5 w-5" aria-hidden="true" />
