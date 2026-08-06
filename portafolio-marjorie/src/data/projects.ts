@@ -27,6 +27,7 @@ export const PROJECTS: Project[] = [
   {
     slug: "sistema-encuestas-egreso",
     title: "Sistema de Encuestas de Egreso",
+    img: "/images/Encuestas.jpeg",
     description:
       "Sistema desarrollado desde cero para administrar encuestas de egresados y analizar información académica.",
     technologies: ["PHP", "Symfony", "PostgreSQL", "Javascript", "MongoDB", "Bootstrap", "JWT", "Apache Superset"],
