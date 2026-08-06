@@ -17,7 +17,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           aria-hidden="true"
         />
 
-        {project.img && (
+        {project.img ? (
           <Image
             src={project.img}
             alt={`Vista previa del proyecto ${project.title}`}
@@ -25,6 +25,10 @@ export default function ProjectCard({ project }: ProjectCardProps) {
             sizes="(min-width: 1024px) 50vw, 100vw"
             className="object-contain p-4"
           />
+        ) : (
+          <span className="absolute inset-0 flex items-center justify-center p-4 text-zinc-500">
+            No disponible
+          </span>
         )}
       </div>
 

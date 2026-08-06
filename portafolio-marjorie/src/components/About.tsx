@@ -29,6 +29,13 @@ const ABOUT_CARDS = [
 export default function About() {
   return (
     <section id="sobre-mi" className="relative border-b border-white/5 bg-zinc-950 py-24 sm:py-28">
+      <div
+        className="pointer-events-none absolute inset-0 overflow-hidden"
+        aria-hidden="true"
+      >
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_15%_20%,rgba(34,211,238,0.12),transparent_32%),radial-gradient(circle_at_88%_82%,rgba(59,130,246,0.13),transparent_35%)]" />
+      </div>
+
       <div className="relative mx-auto max-w-6xl px-5 sm:px-8">
         <SectionHeading
           eyebrow="Conoce un poco más de mi experiencia"
@@ -44,15 +51,15 @@ export default function About() {
                 className="absolute -inset-3 -z-10 rounded-[28px] bg-linear-to-br from-violet-600/20 via-blue-600/10 to-cyan-500/20 blur-2xl"
                 aria-hidden="true"
               />
-              
+
               <Image
-                  src="/images/foto-profesional.jpg"
-                  alt="Retrato de Marjorie Reyes, Desarrolladora Full Stack"
-                  width={400}
-                  height={500}
-                  className="aspect-4/5 w-full rounded-2xl border border-white/10 object-cover"
-                  priority
-                />
+                src="/images/foto-profesional.jpg"
+                alt="Retrato de Marjorie Reyes, Desarrolladora Full Stack"
+                width={400}
+                height={500}
+                className="aspect-4/5 w-full rounded-2xl border border-white/10 object-cover"
+                priority
+              />
             </div>
 
             <dl className="mx-auto mt-8 grid max-w-xs grid-cols-2 gap-6">
@@ -75,8 +82,8 @@ export default function About() {
               <span className="font-medium text-zinc-200">
                 Ingeniera en Ciencias y Sistemas
               </span>{" "}
-              graduada de la Universidad de San Carlos de Guatemala. 
-              Me especializo en el desarrollo Full Stack, cuento con experiencia construyendo 
+              graduada de la Universidad de San Carlos de Guatemala.
+              Me especializo en el desarrollo Full Stack, cuento con experiencia construyendo
               aplicaciones web y sistemas institucionales.
             </p>
             <p className="text-base leading-relaxed sm:text-lg">

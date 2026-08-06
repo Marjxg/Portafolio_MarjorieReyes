@@ -10,7 +10,20 @@ const LEGEND = [
 
 export default function Skills() {
   return (
-    <section id="tecnologias" className="relative border-b border-white/5 bg-zinc-950 py-24 sm:py-28">
+    <section id="tecnologias" className="relative overflow-hidden bg-violet-900/10 py-24 sm:py-28">
+      <div className="pointer-events-none absolute inset-0" aria-hidden="true">
+        <div className="absolute left-1/2 top-0 h-96 w-xl -translate-x-1/2 rounded-full bg-rose-600/15 blur-[120px]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,rgba(255,255,255,0.03),transparent_60%)]" />
+        <div
+          className="
+            absolute inset-0
+            bg-[linear-gradient(to_right,rgba(6,182,212,0.08)_1px,transparent_1px),linear-gradient(to_bottom,rgba(139,92,246,0.08)_1px,transparent_1px)]
+            bg-size-[36px_36px]
+            mask-[linear-gradient(to_bottom,transparent,black_15%,black_85%,transparent)]
+          "
+        />
+      </div>
+      
       <div className="relative mx-auto max-w-6xl px-5 sm:px-8">
         <SectionHeading
           eyebrow="Habilidades técnicas"
@@ -18,8 +31,7 @@ export default function Skills() {
           description="Tecnologías que utilizo para desarrollar aplicaciones web, APIs, bases de datos y soluciones empresariales."
           align="center"
         />
-
-        {/* Leyenda de jerarquía, sin porcentajes ni barras de progreso */}
+        
         <div className="mt-8 flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
           {LEGEND.map((item) => (
             <span
