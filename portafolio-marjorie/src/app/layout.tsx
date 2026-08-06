@@ -17,9 +17,9 @@ export const metadata: Metadata = {
   description:
     "Portafolio personal de Marjorie Reyes, desarrolladora Full Stack.",
   icons: {
-    icon: "/icon.jpg",
-    shortcut: "/icon.jpg",
-    apple: "/icon.jpg",
+    icon: "/icon.png",
+    shortcut: "/icon.png",
+    apple: "/icon.png",
   },
 };
 
