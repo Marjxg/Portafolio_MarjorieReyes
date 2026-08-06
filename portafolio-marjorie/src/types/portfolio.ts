@@ -44,3 +44,14 @@ export interface ExperienceEntry {
   relatedProjects?: string[];
   technologies: string[];
 }
+
+export interface Project {
+  slug: string;
+  title: string;
+  img?: string;
+  description: string;
+  technologies: string[];
+  features: string[];
+  institutional: boolean;
+  url?: string;
+}
