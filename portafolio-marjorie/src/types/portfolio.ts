@@ -55,3 +55,12 @@ export interface Project {
   institutional: boolean;
   url?: string;
 }
+
+export interface Certificate {
+  title: string;
+  institution: string;
+  date: string;
+  //image: string;
+  file?: string;
+  skills: string[];
+}
